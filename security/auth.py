@@ -1,12 +1,12 @@
 """
 Aurelius Health Clinic — Security Module
 Implements security controls for healthcare IoT data:
-  - Data validation and sanitisation
-  - Role-based access control (RBAC)
-  - Data encryption for patient records (UK GDPR Article 9)
-  - Audit logging (NHS Data Security and Protection Toolkit)
-  - Input validation against injection attacks (OWASP IoT Top 10)
-  - Data anonymisation for research/analytics
+  Data validation and sanitisation
+  Role-based access control (RBAC)
+  Data encryption for patient records (UK GDPR Article 9)
+  Audit logging (NHS Data Security and Protection Toolkit)
+  Input validation against injection attacks (OWASP IoT Top 10)
+  Data anonymisation for research/analytics
 """
 
 import hashlib
@@ -33,10 +33,8 @@ class SecurityManager:
         self.sensitive_fields = SECURITY["sensitive_fields"]
         self.allowed_roles = SECURITY["allowed_roles"]
 
-    # ============================================================
     # 1. DATA VALIDATION (OWASP IoT #3 — Insecure Data Transfer)
-    # ============================================================
-
+   
     def validate_patient_data(self, data):
         """
         Validate incoming patient data against expected ranges.
@@ -123,9 +121,7 @@ class SecurityManager:
 
         return len(errors) == 0, errors
 
-    # ============================================================
     # 2. ROLE-BASED ACCESS CONTROL (OWASP IoT #5 — Privacy)
-    # ============================================================
 
     def generate_token(self, user_role):
         """
@@ -196,9 +192,7 @@ class SecurityManager:
 
         return has_access, role
 
-    # ============================================================
     # 3. DATA ENCRYPTION (UK GDPR Article 9 — Health Data)
-    # ============================================================
 
     def hash_patient_id(self, patient_id):
         """
@@ -246,9 +240,7 @@ class SecurityManager:
         actual_hash = self.create_integrity_hash(data)
         return hmac.compare_digest(actual_hash, expected_hash)
 
-    # ============================================================
     # 4. AUDIT LOGGING (NHS DSPT Standard 7)
-    # ============================================================
 
     def log_security_event(self, event_type, details, severity="INFO"):
         """
@@ -273,9 +265,7 @@ class SecurityManager:
 
         return event
 
-    # ============================================================
     # 5. BRUTE FORCE PROTECTION
-    # ============================================================
 
     def record_failed_attempt(self, identifier):
         """Track failed authentication attempts."""
