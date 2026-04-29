@@ -1,0 +1,9 @@
+* 651b528 Added analysis script with 8 report charts and statistical summary
+* ab5514c Added comprehensive README with installation and usage instructions
+* 74a923b Clean modular structure with security module
+* ef1c09b Restructured to modular architecture with security module — all tests pass
+* 214c99a Add data receiver script
+* 25feb84 Upload clinic project files
+* 3d88261 Device planning: 16 devices mapped across 2 domains
+* b4775cb Initial project setup: folder structure and dependencies
+* 45b0ba4 Initial project setup: folder structure and dependencies

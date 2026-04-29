@@ -1,0 +1,105 @@
+commit 651b528dacd03aa16d0208c815fa65cb5469a7ea
+Author: sk <2306969@live.stmarys.ac.uk>
+Date:   Wed Apr 29 19:45:24 2026 +0100
+
+    Added analysis script with 8 report charts and statistical summary
+
+ analysis.py                                | 325 +++++++++++++++++++++++++++++
+ output/charts/01_heart_rate_24h.png        | Bin 0 -> 477291 bytes
+ output/charts/02_spo2_anomalies.png        | Bin 0 -> 577195 bytes
+ output/charts/03_patient_deep_dive.png     | Bin 0 -> 479510 bytes
+ output/charts/04_environment_co2_temp.png  | Bin 0 -> 652106 bytes
+ output/charts/05_med_fridge_compliance.png | Bin 0 -> 580212 bytes
+ output/charts/06_alert_distribution.png    | Bin 0 -> 92463 bytes
+ 7 files changed, 325 insertions(+)
+
+commit ab5514ccead6733d0d3e5e335431c85d6815dead
+Author: sk <2306969@live.stmarys.ac.uk>
+Date:   Wed Apr 29 01:48:06 2026 +0100
+
+    Added comprehensive README with installation and usage instructions
+
+ .DS_Store        | Bin 10244 -> 8196 bytes
+ README.md        | 281 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ security/auth.py |  24 ++---
+ 3 files changed, 288 insertions(+), 17 deletions(-)
+
+commit 74a923b2f2f02f863bd854766e0ca777b64e3d9a
+Author: sk <2306969@live.stmarys.ac.uk>
+Date:   Wed Apr 29 01:32:56 2026 +0100
+
+    Clean modular structure with security module
+
+ .gitignore | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit ef1c09b5832db3426f6117339278f833d7206620
+Author: sk <2306969@live.stmarys.ac.uk>
+Date:   Wed Apr 29 01:31:24 2026 +0100
+
+    Restructured to modular architecture with security module — all tests pass
+
+ .DS_Store                                 | Bin 8196 -> 10244 bytes
+ communication/__init__.py                 |   1 +
+ communication/mqtt_handler.py             | 102 ++++++++++
+ config.py                                 | 130 +++++++++++++
+ dashboard/app.py                          | 266 ++++++++++++++++++++++++++
+ data/aurelius_iot.db                      | Bin 0 -> 1437696 bytes
+ main.py                                   | 130 +++++++++++++
+ processing/__init__.py                    |   1 +
+ processing/edge_processor.py              | 123 ++++++++++++
+ security/__init__.py                      |   1 +
+ security/auth.py                          | 306 ++++++++++++++++++++++++++++++
+ sensors/__init__.py                       |   1 +
+ sensors/sensor_simulator.py               | 148 +++++++++++++++
+ storage/__init__.py                       |   1 +
+ storage/database.py                       | 210 ++++++++++++++++++++
+ src/data_receiver.py => tests/__init__.py |   0
+ tests/test_sensors.py                     | 157 +++++++++++++++
+ wokwi/patient.py                          | 224 ++++++++++++++++++++++
+ wokwi/room.py                             | 268 ++++++++++++++++++++++++++
+ 19 files changed, 2069 insertions(+)
+
+commit 214c99acdec3109f98c0942ebb1d6f049dc077c6
+Author: sk <2306969@live.stmarys.ac.uk>
+Date:   Sat Apr 11 01:06:27 2026 +0100
+
+    Add data receiver script
+
+ src/data_receiver.py | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 25feb8421265340ce28fe4725cf180f21ba79b89
+Author: sk <2306969@live.stmarys.ac.uk>
+Date:   Sat Apr 11 01:01:32 2026 +0100
+
+    Upload clinic project files
+
+ .DS_Store | Bin 8196 -> 8196 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 3d882610b175170af56aacb8de1fa68ae7592766
+Author: sk <2306969@live.stmarys.ac.uk>
+Date:   Fri Apr 3 20:11:11 2026 +0100
+
+    Device planning: 16 devices mapped across 2 domains
+
+commit b4775cbb11b18154c9161ec0ce6ec11f336324e6
+Author: sk <2306969@live.stmarys.ac.uk>
+Date:   Fri Apr 3 20:09:20 2026 +0100
+
+    Initial project setup: folder structure and dependencies
+
+ .DS_Store        | Bin 8196 -> 8196 bytes
+ .gitignore       |   5 +++++
+ requirements.txt |   7 +++++++
+ 3 files changed, 12 insertions(+)
+
+commit 45b0ba4e6379f3b61010127791727d413bbec1d2
+Author: sk <2306969@live.stmarys.ac.uk>
+Date:   Fri Apr 3 19:35:35 2026 +0100
+
+    Initial project setup: folder structure and dependencies
+
+ .DS_Store | Bin 0 -> 8196 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
